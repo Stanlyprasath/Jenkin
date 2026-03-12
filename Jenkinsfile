@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     tools {
-        jdk 'JDK'        // Replace with your Jenkins JDK tool name
-        maven 'MAVEN'    // Replace with your Jenkins Maven tool name
+        jdk 'JDK'        
+        maven 'MAVEN' 
     }
 
     environment {
@@ -24,7 +24,7 @@ pipeline {
             steps {
                 echo "Deploying WAR to Tomcat..."
                 bat """
-                    copy /Y target\\${WAR_NAME} ${TOMCAT_HOME}\\webapps\\
+                    copy /Y target\\${WAR_NAME} ${TOMCAT_HOME}
                 """
             }
         }
